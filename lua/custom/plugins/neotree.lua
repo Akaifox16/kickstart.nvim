@@ -7,15 +7,14 @@ return {
         "MunifTanjim/nui.nvim",
     },
 
-    opts = {
-        popup_border_style = "rounded",
-        window = {
-            position = "current",
-        },
-
-    },
-
     config = function()
+        require("neo-tree").setup({
+            popup_border_style = "rounded",
+            window = {
+                position = "current",
+            },
+        })
+
         vim.keymap.set('n', '<leader>pv', '<cmd>Neotree<CR>', { desc = 'Show Explorer' })
     end
 }
