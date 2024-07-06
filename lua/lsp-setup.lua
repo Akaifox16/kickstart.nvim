@@ -151,6 +151,18 @@ local servers = {
   -- tsserver = {},
   --
 
+  yamlls = {
+    settings = {
+      yaml = {
+        schemas = {
+          kubernetes = '*.yaml',
+          ['http://json.schemastore.org/kustomization'] = 'kustomization.{yml,yaml}',
+          ['http://json.schemastore.org/chart'] = 'Chart.{yml,yaml}',
+        },
+      },
+    },
+  },
+
   lua_ls = {
     -- cmd = {...},
     -- filetypes = { ...},
